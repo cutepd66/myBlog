@@ -1,0 +1,53 @@
+/* 顶部头像部分 */
+
+.head-pic {
+    height: 200px;
+    border-bottom: 2px dashed #ccc;
+    text-align: center;
+    line-height: 200px;
+    padding-top: 20px;
+}
+
+.head-pic img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.head-pic img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+/* 详细信息 */
+
+.person-details {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.person-details tr {
+    width: 100%;
+}
+
+.person-details tr td:nth-child(1) {
+    width: 30%;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.person-details tr td:nth-child(2) {
+    width: 70%;
+    font-size: 24px;
+}
+
+.person-details .post-article {
+    margin-top: 10px;
+}
+
+.person-details .post-article a {
+    font-size: 36px;
+    color: red;
+    margin-right: 40px;
+}

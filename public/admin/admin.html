@@ -1,0 +1,131 @@
+<script src="/login/status"></script>
+<script>
+    if (!isLogin) {
+        location.href = "../html/login.html";
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div class="contain">
+        <div class="tab-nav">
+            <ul>
+                <li><a href="#" id="userManagement">用户管理</a></li>
+                <li><a href="#" id="articleManagement">文章管理</a></li>
+                <li><a href="#" id="commentManagement">评论管理</a></li>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <ul>
+                <li class="show">
+                    <table>
+                        <thead>
+                            <th>序号</th>
+                            <th>用户名</th>
+                            <th>邮箱</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody id="userManagementBox">
+
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <table>
+                        <thead>
+                            <th>序号</th>
+                            <th>文章标题</th>
+                            <th>作者邮箱</th>
+                            <th>发布时间</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody id="articleManagementBox">
+
+                        </tbody>
+                    </table>
+                </li>
+                <li>
+                    <table>
+                        <thead>
+                            <th>序号</th>
+                            <th>评论内容</th>
+                            <th>评论所属文章</th>
+                            <th>评论者邮箱</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody id="commentManagementBox">
+
+                        </tbody>
+                    </table>
+                </li>
+            </ul>
+        </div>
+        <div id="tab-pagination">
+            <ul class="page" id="paginationBox">
+
+            </ul>
+        </div>
+    </div>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/admin.js"></script>
+    <!-- 用户管理模板 -->
+    <script type="text/html" id="userManagementTpl">
+        <div class="all">总共有{{data.total}}位用户</div>
+        {{each data.records value i}}
+        <tr>
+            <td>{{i+1}}</td>
+            <td>{{value.uname}}</td>
+            <td>{{value.email}}</td>
+            <td><a href="javascript:;" class="userDel" data-id={{value._id}}>删除</a></td>
+        </tr>
+        {{/each}}
+    </script>
+    <!-- 文章管理模板 -->
+    <script type="text/html" id="articleManagementTpl">
+        <div class="all">总共有{{data.total}}篇文章</div>
+        {{each data.records value i}}
+        <tr>
+            <td>{{i+1}}</td>
+            <td><a href="../html/article.html?_id={{value._id}}&userId=5fe2e47db07c173b1ca0ddc6" id="articleTitle">{{value.title}}</a></td>
+            {{if value.author}}
+            <td>{{value.author.email}}</td>
+            {{/if}}
+            <td>{{value.publishDate}}</td>
+            <td><a href="javascript:;" class="articleDel" data-id={{value._id}}>删除</a></td>
+        </tr>
+        {{/each}}
+    </script>
+    <script type="text/html" id="commentManagementTpl">
+        <div class="all">总共有{{data.total}}条评论</div>
+        {{each data.records value i}}
+        <tr>
+            <td>{{i+1}}</td>
+            <td>{{value.content}}</td>
+            <td><a href="javascript:;">{{value.aid.title}}</a></td>
+            <td>{{value.uid.email}}</td>
+            <td><a href="javascript:;" class="commentDel" data-id={{value._id}}>删除</a></td>
+        </tr>
+        {{/each}}
+    </script>
+    <!-- 分页 -->
+    <script type="text/html" id="paginationTpl">
+        <li><a href="#" id="prePagination" data-page="{{data.page}}">上一页</a></li>
+        {{each data.display}}
+        <li><a href="#" class="paginationEle" data-page="{{$value}}">{{$value}}</a></li>
+        {{/each}}
+        <li><a href="#" id="nextPagination" data-page="{{data.page}}" page-max="{{data.pages}}">下一页</a></li>
+    </script>
+</body>
+
+</html>

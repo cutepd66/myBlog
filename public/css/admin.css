@@ -1,0 +1,105 @@
+.contain>div {
+    float: left;
+}
+
+.contain {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* tab切换标题部分 */
+
+.tab-nav {
+    width: 14%;
+    height: calc(100vh);
+    background-color: #42b1f2;
+    padding-top: 240px;
+}
+
+.tab-nav li {
+    text-align: center;
+    font-size: 32px;
+    line-height: 32px;
+    height: 80px;
+    font-weight: bold;
+}
+
+.tab-nav li a {
+    color: #000;
+    width: 100%;
+}
+
+.tab-nav li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+
+/* tab切换内容部分 */
+
+.tab-content {
+    width: 86%;
+    height: calc(100vh);
+    padding-top: 8%;
+    padding-left: 8%;
+}
+
+.tab-content li table {
+    border: 2px dashed #ccc;
+    padding: 10px;
+    width: 92%;
+}
+
+.tab-content table tr {
+    height: 50px;
+    font-size: 18px;
+}
+
+.tab-content table thead tr {
+    font-size: 24px;
+}
+
+.tab-content table td {
+    text-overflow: ellipsis;
+}
+
+.tab-content table a {
+    color: #000;
+}
+
+
+/* table显示样式 */
+
+.tab-content li {
+    display: none;
+}
+
+.tab-content ul .show {
+    display: block;
+}
+
+
+/* 数据分页部分 */
+
+.page {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+
+.page li {
+    float: left;
+    margin: 0 20px;
+}
+
+
+/* 总共有多少用户 */
+
+.all {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 42px;
+    font-weight: bold;
+}

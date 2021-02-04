@@ -1,0 +1,24 @@
+{
+  "name": "myBlog",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "captchapng": "0.0.1",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.1",
+    "joi": "^17.3.0",
+    "mongoose": "^5.11.6",
+    "mongoose-sex-page": "^1.2.4",
+    "svg-captcha": "^1.4.0"
+  }
+}

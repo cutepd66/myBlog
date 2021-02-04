@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div class="register w">
+        <form id="formUser">
+            <div class="each-option">
+                <p>选择头像</p>
+                <img src="" class="head-preview" id="head-preview">
+                <div><input type="file" id="change-file"></div>
+                <input type="hidden" name="avatar" id="hiddenAvatar">
+            </div>
+            <div class="each-option">
+                <p>用户名</p>
+                <div><input type="text" name="uname" placeholder="请输入您的名字" id="uname-input"></div>
+            </div>
+            <div class="each-option">
+                <p>邮箱</p>
+                <div><input type="email" name="email" placeholder="请输入您的邮箱"></div>
+            </div>
+            <div class="each-option">
+                <p>性别(选填)</p>
+                <div><span>男</span><input type="radio" name="sex" value="男" class="sex-option">
+                    <span>女</span><input type="radio" name="sex" value="女" class="sex-option"></div>
+            </div>
+            <div class="each-option">
+                <p>QQ(选填)</p>
+                <div><input type="text" name="qq" placeholder="请输入您的QQ"></div>
+            </div>
+            <div class="each-option">
+                <p>兴趣爱好(选填)</p>
+                <div>
+                    <input type="checkbox" name="hobby" value="打篮球" class="check-hobby"><span>打篮球</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="hobby" value="敲代码" class="check-hobby"><span>敲代码</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="hobby" value="踢足球" class="check-hobby"><span>踢足球</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="hobby" value="乒乓球" class="check-hobby"><span>乒乓球</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="hobby" value="打豆豆" class="check-hobby"><span>打豆豆</span>&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="hobby" value="其他" class="check-hobby"><span>其他</span>&nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+            <div class="each-option">
+                <p>密码</p>
+                <div><input type="password" name="password" placeholder="请输入您的密码" id="password-input"></div><br/>
+            </div>
+            <div class="each-option">
+                <input type="text" name="verifyCode" placeholder="请输入随机验证码" id="veryfyEle">
+                <img src="/imgCode" id="veryImg">
+            </div>
+            <div class="each-option">
+                <button type="submit">立即注册</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="../js/jquery-1.12.4.js"></script>
+<script src="../js/register.js"></script>
+
+</html>

@@ -1,0 +1,146 @@
+/* 文章详情页的头部文章信息 */
+
+.article-info {
+    height: 120px;
+    margin-top: 20px;
+    border-bottom: 3px dashed #ccc;
+}
+
+.article-info h3 {
+    height: 60px;
+    line-height: 60px;
+    font-weight: normal;
+    padding-left: 10px;
+    font-size: 24px;
+}
+
+.art-info {
+    height: 60px;
+    padding-left: 10px;
+    line-height: 60px;
+}
+
+.art-info span {
+    margin-right: 20px;
+    color: #8c8888;
+}
+
+
+/* 文章详情页的正文 */
+
+.article-content {
+    margin-bottom: 20px;
+}
+
+.article-content h4 {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.article-content p {
+    text-indent: 2em;
+}
+
+.article-content>img {
+    width: 100%;
+}
+
+
+/* 点赞打赏部分 */
+
+.love-money {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.love-money span {
+    margin-right: 10px;
+}
+
+
+/* 发表评论部分 */
+
+.article-comment {
+    position: relative;
+    height: 210px;
+}
+
+.article-comment h4 {
+    height: 40px;
+    line-height: 40px;
+    border-left: 4px solid #e25257;
+    padding-left: 10px;
+    font-weight: normal;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.article-comment textarea {
+    width: 100%;
+    height: 120px;
+}
+
+.article-comment button {
+    position: absolute;
+    right: 4px;
+    bottom: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #eb5055;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.article-comment button a {
+    color: #fff;
+}
+
+.article-comment button:hover {
+    cursor: pointer;
+}
+
+
+/* 所有评论 */
+
+.comment .each-comment {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.comment .each-comment>div {
+    position: relative;
+    height: 80px;
+    line-height: 100px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.comment .each-comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.comment .each-comment span {
+    position: absolute;
+    top: -2px;
+    left: 80px;
+    height: 80px;
+    line-height: 80px;
+    color: #b4afb4;
+}
+
+.comment .each-comment p {
+    padding-left: 80px;
+}
+
+
+/* //给每条评论加下划线 方便区分*/
+
+.heihei {
+    padding-bottom: 10px;
+    border-bottom: 2px dashed #ccc;
+}

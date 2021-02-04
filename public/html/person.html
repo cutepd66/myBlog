@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/person.css">
+</head>
+
+<body>
+    <div class="person-info w" id="userInfoBox">
+
+    </div>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/person.js"></script>
+    <script type="text/html" id="userInfoTpl">
+        <!-- 头像 -->
+        <div class="head-pic">
+            <img src="{{data.avatar}}">
+        </div>
+        <!-- 详细信息 -->
+        <div class="person-details">
+            <div>
+                <table>
+                    <tr>
+                        <td>昵称</td>
+                        <td>{{data.uname}}</td>
+                    </tr>
+                    <tr>
+                        <td>邮箱</td>
+                        <td>{{data.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>QQ</td>
+                        <td>{{data.qq}}</td>
+                    </tr>
+                    <tr>
+                        <td>性别</td>
+                        <td>{{data.sex}}</td>
+                    </tr>
+                    <tr>
+                        <td>兴趣爱好</td>
+                        <td>&nbsp;&nbsp;&nbsp; {{each data.hobby}} {{$value}} &nbsp;&nbsp;&nbsp; {{/each}}
+                        </td>
+                    </tr>
+                </table>
+                <div class="post-article"><a href="../html/all-article.html?_id={{data._id}}">所有文章</a><a href="../html/publish.html?_id={{data._id}}">发表文章</a></div>
+            </div>
+        </div>
+    </script>
+</body>
+
+</html>

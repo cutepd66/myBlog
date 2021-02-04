@@ -1,0 +1,113 @@
+.publish {
+    border: 2px dashed #ccc;
+    position: relative;
+}
+
+.each-publish h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.each-publish {
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.each-publish img {
+    width: 860px;
+}
+
+
+/* .each-publish input,
+textarea {
+    border: 2px solid #3aa7f9;
+} */
+
+
+/* 文字标题input样式 */
+
+.article-topic {
+    width: 860px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid #3aa7f9;
+}
+
+
+/* 子标题input样式 */
+
+.article-subtitle {
+    width: 500px;
+    height: 40px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+}
+
+.article-link {
+    width: 500px;
+    height: 30px;
+    font-size: 18px;
+    border: 2px solid blue;
+}
+
+
+/* 文字提交按钮 */
+
+.article-submit button {
+    position: absolute;
+    right: 10px;
+    bottom: -50px;
+    background-color: #fff;
+    border: 2px solid #3aa7f9;
+    width: 100px;
+    height: 40px;
+    font-size: 22px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+.article-submit button:hover {
+    background-color: #3aa7f9;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* 操作的按钮部分 */
+
+.publish-operate {
+    position: fixed;
+    top: 300px;
+    left: 30px;
+}
+
+.publish-operate div {
+    border: 3px solid #3aa7f9;
+    font-size: 28px;
+    margin: 20px 10px;
+    border-radius: 6px;
+    text-align: center;
+    width: 240px;
+    font-weight: 540;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.publish-operate div:hover {
+    cursor: pointer;
+    background-color: #3aa7f9;
+    color: #fff;
+}
+
+
+/* 文章封面的img*/
+
+.article-cover img {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 280px;
+    height: 220px;
+    display: none;
+}

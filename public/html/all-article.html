@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/all-article.css">
+</head>
+
+<body>
+    <div class="w" id="allArticleBox">
+
+    </div>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/all-article.js"></script>
+    <script type="text/html" id="allArticleTpl">
+        <!-- 头部信息 -->
+        <div class="all-article">
+            <h3>{{data[0].author.uname}}的所有文章</h3>
+        </div>
+        <!-- 所有文章部分 -->
+        <div class="article-part">
+            <table>
+                <thead>
+                    <tr>
+                        <td class="number">序号</td>
+                        <td class="title">文章标题</td>
+                        <td class="time">发布时间</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {{each data value i}}
+                    <tr>
+                        <td>{{i+1}}</td>
+                        <td><a href="article.html?_id={{value._id}}">{{value.title}}</a></td>
+                        <td>{{value.publishDate}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </script>
+    <!-- {{each data as value i}}
+                {{each data  value i}} 下面这种是比较新的遍历方式-->
+</body>
+
+</html>

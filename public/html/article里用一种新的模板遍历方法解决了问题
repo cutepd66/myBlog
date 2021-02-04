@@ -1,0 +1,8 @@
+            {{each data.content item key}} {{if getStr(key)=="articleArea"}}
+            <p>{{item}}</p>
+            </br>
+            {{/if}} {{if getStr(key)=="subtitle"}}
+            <h4>{{item}}</h4>
+            </br>
+            {{/if}} {{if getStr(key)=="Img"}}
+            <img src="{{item}}"></br> {{/if}} {{/each}}

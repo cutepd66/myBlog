@@ -1,0 +1,87 @@
+.register {
+    padding-top: 60px;
+    padding-left: 100px;
+    border: 2px dashed #ccc;
+}
+
+.register form p {
+    height: 50px;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+.register form .each-option {
+    margin-bottom: 10px;
+}
+
+.register form input {
+    background-color: #fff;
+    width: 700px;
+    height: 40px;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    color: #333;
+}
+
+.register .sex-option {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.register .each-option span {
+    font-size: 20px;
+}
+
+.register .check-hobby {
+    width: 20px;
+    height: 20px;
+}
+
+.register .each-option button {
+    width: 180px;
+    height: 60px;
+    margin-left: 260px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    background-color: #eb495e;
+}
+
+.register .each-option button:hover {
+    cursor: pointer;
+}
+
+
+/* 用户注册时候选择头像预览 */
+
+.register .each-option {
+    position: relative;
+}
+
+.register .each-option .head-preview {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: -40px;
+    left: 120px;
+    border-radius: 50%;
+    display: none;
+}
+
+
+/* 随机验证码 */
+
+.register form #veryfyEle {
+    width: 200px;
+}
+
+#veryImg {
+    position: absolute;
+    left: 240px;
+    top: -2px;
+}
+
+#veryImg:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,77 @@
+<script src="/login/status"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/iconfont.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-nav">
+            <div class="logo">
+                <h1><a href="javascript:;">可爱的胖丁</a></h1>
+            </div>
+            <ul>
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="javascript:;" id="publishA">发表</a></li>
+                <li><a href="./html/about.html">关于</a></li>
+                <li class="search-box"><a href="#" id="search-a"><span class="iconfont" style="font-weight: bold; font-size: 20px;">&#xe6a6;</span></a>
+                    <input class="search-input" id="search-input"></input>
+                </li>
+                <li><a href="./html/login.html" id="isLogin1">登录</a></li>
+                <li><a href="./html/register.html" id="isLogin2">注册</a></li>
+                <li id="person">
+                </li>
+            </ul>
+        </div>
+        <div class="article w">
+            <ul id="articleBox">
+            </ul>
+        </div>
+        <div class="bottom-nav w">
+            <ul id="paginationBox">
+
+            </ul>
+        </div>
+        <div class="go-top"><span class="iconfont">&#xe633;
+        </span></div>
+        <div class="logout"><a href="javascript:;" id="logout">退出登录</a></div>
+    </div>
+    <script src="./js/jquery-1.12.4.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        template.defaults.imports.getQueryString = getQueryString;
+        template.defaults.imports.userId = localStorage.getItem("_id");
+        template.defaults.imports.avatar = localStorage.getItem("avatar");
+    </script>
+    <script type="text/html" id="articleTpl">
+        {{each data.records}}
+        <li>
+            <div class="cover">
+                <a href="./html/article.html?_id={{$value._id}}&userId={{userId}}"><img src="{{$value.cover}}" alt=""></a>
+            </div>
+            <p><a href="#">{{$value.title}}</a></p>
+            <div class="article-info">
+                <span class="iconfont">&#xe72a;{{$value.publishDate}} </span><span class="iconfont">&#xe661;{{$value.views}}</span>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="paginationTpl">
+        <li><a href="javascript:;" data-page={{data.page}} id="pre-page">上一页</a></li>
+        {{each data.display}}
+        <li><a href="javascript:;" class="niubi">{{$value}}</a></li>
+        {{/each}}
+        <li><a href="javascript:;" data-page={{data.page}} page-max={{data.pages}} id="next-page">下一页</a></li>
+    </script>
+</body>
+
+</html>

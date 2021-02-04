@@ -1,0 +1,51 @@
+<script src="/login/status"></script>
+<script>
+    if (!isLogin) {
+        alert("请先登录！");
+        location.href = "./login.html";
+    }
+</script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/publish.css">
+</head>
+
+<body>
+    <!-- 添加文章的内容部分 -->
+    <form id="publishForm">
+        <div class="publish w" id="publish-box">
+            <div class="each-publish">
+                <h3>文章标题</h3>
+                <input type="text" class="article-topic" name="topic">
+            </div>
+            <!-- 提交按钮 -->
+            <div class="article-submit"><button type="submit">提交</button></div>
+        </div>
+    </form>
+
+    <!-- 添加文字的按钮部分 -->
+    <div class="publish-operate">
+        <div id="add-word">添加文字</div>
+        <div id="add-pic">添加图片</div>
+        <div id="add-subtitle">添加添加子标题</div>
+        <div id="add-link">添加链接</div>
+        <div id="add-cover">添加文章封面</div>
+    </div>
+
+    <!-- 文章封面的img -->
+    <div class="article-cover">
+        <img src="" alt="请添加文章封面" id="cover">
+    </div>
+
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/publish.js"></script>
+</body>
+
+</html>

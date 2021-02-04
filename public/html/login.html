@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <div class="login">
+        <form id="loginForm">
+            <table>
+                <tr>
+                    <td>邮&nbsp;&nbsp;&nbsp;箱:</td>
+                    <td><input type="email" name="email" placeholder="请输入邮件地址" id="eamilInp"></td>
+                </tr>
+                <tr>
+                    <td class="xuyao">密&nbsp;&nbsp;&nbsp;码:</td>
+                    <td class="xuyao"><input type="password" name="password" placeholder="请输入密码(6~12位数字或字母)" id="passwordInp"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="login-style"><button type="submit">登录</button></td>
+                </tr>
+            </table>
+            <div class="verifyBox">
+                <input type="text" name="verifyCode" placeholder="请输入随机验证码" id="veryfyEle">
+                <img src="/imgCode" id="veryImg">
+            </div>
+        </form>
+    </div>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        $("#loginForm").on("submit", function() {
+            var result = serializeToJson($(this));
+            if (result.email.trim().length == "") {
+                alert("请输入邮箱");
+                //阻止程序向下执行
+                return false;
+            }
+            if (result.password.trim().length == "") {
+                alert("请输入密码");
+                //阻止程序向下执行
+                return false;
+            }
+        });
+    </script>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

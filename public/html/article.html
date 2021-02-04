@@ -1,0 +1,79 @@
+<script src="/login/status"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/iconfont.css">
+    <link rel="stylesheet" href="../css/article.css">
+</head>
+
+<body>
+    <div id="articleDetailBox">
+
+    </div>
+
+    <div class="love-money w">
+        <div>
+            <span class="iconfont">&#xe626;<a href="#">点赞(1000)</a></span>
+            <span class="iconfont">&#xe685;<a href="#">赞赏</a></span>
+        </div>
+    </div>
+    <div class="article-comment w">
+        <h4>发表评论</h4>
+        <form id="submitCommentBox">
+            <textarea name="comment" id="textareaEle" cols="30" rows="10"></textarea>
+            <button type="submit">提交评论</button>
+        </form>
+    </div>
+    <div class="comment w">
+        <div class="each-comment" id="commentBox">
+
+        </div>
+    </div>
+    <!-- 小火箭 -->
+    <div class="go-top"><span class="iconfont">&#xe633;
+    </span></div>
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/template-web.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/article.js"></script>
+    <script>
+        function getStr(str) {
+            str = str.substr(0, str.length - 1);
+            return str;
+        }
+        template.defaults.imports.getStr = getStr;
+    </script>
+    <script type="text/html" id="articleDetailTpl">
+        <!-- 文章详情信息 -->
+        <div class="article-info w">
+            <h3>{{data.title}}</h3>
+            <div class="art-info"><span class="iconfont">&#xe663;{{data.author.uname}}</span><span class="iconfont">&#xe72a;{{data.publishDate}}</span><span class="iconfont">&#xe661;浏览量{{data.views}}</span></div>
+        </div>
+        <!-- 文章正文部分 -->
+        <div class="article-content w">
+            {{each data.content item key}} {{if getStr(key)=="articleArea"}}
+            <p>{{item}}</p>
+            </br>
+            {{/if}} {{if getStr(key)=="subtitle"}}
+            <h4>{{item}}</h4>
+            </br>
+            {{/if}} {{if getStr(key)=="Img"&&item!=""}}
+            <img src="{{item}}"></br> {{/if}} {{/each}}
+        </div>
+    </script>
+    <script type="text/html" id="allCommentTpl">
+        {{each data}}
+        <div>
+            <img src="{{$value.uid.avatar}}"><span>{{$value.uid.uname}}</span>
+        </div>
+        <p class="heihei">{{$value.content}}</p>
+        {{/each}}
+    </script>
+</body>
+
+</html>
