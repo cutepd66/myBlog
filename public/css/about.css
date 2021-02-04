@@ -52,4 +52,13 @@ tr {
     height: 50px;
     font-size: 30px;
     font-weight: bold;
+    margin-bottom: 5px;
+}
+
+table tr td {
+    width: 60px;
+}
+
+.person table .desc {
+    font-size: 24px;
 }

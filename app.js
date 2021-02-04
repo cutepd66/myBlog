@@ -31,7 +31,6 @@ app.use(formidableMiddleware({
     //是否保留文件拓展名
     keepExtensions: true
 }));
-
 //配置静态资源访问
 app.use(express.static(path.join(__dirname, "public")));
 //路由
